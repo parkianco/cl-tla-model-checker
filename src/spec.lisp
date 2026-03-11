@@ -113,14 +113,14 @@
 ;; Aliases for API consistency
 (defun tla-constant-name (c) (tla-const-name c))
 
-(defstruct (tla-var (:conc-name tla-var-))
+(defstruct (tla-var (:conc-name tlav-))
   "A TLA+ VARIABLE declaration."
   (name nil :type (or symbol string))
   (type nil)
   (description nil :type (or null string)))
 
 ;; Aliases for API consistency
-(defun tla-var-name (v) (tla-var-name v))
+(defun tla-var-name (v) (tlav-name v))
 
 ;;; ============================================================================
 ;;; State Machine Representation

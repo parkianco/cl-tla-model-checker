@@ -312,7 +312,8 @@
 ;;; Counterexample and Witness Generation
 ;;; ============================================================================
 
-(defstruct (counterexample (:conc-name cex-))
+(defstruct (counterexample (:conc-name cex-)
+                           (:constructor %make-counterexample))
   "A counterexample trace."
   (property nil)
   (trace nil :type list)
@@ -321,7 +322,7 @@
 
 (defun make-counterexample (state property)
   "Build a counterexample trace leading to STATE."
-  (make-counterexample
+  (%make-counterexample
    :property property
    :trace (build-trace state)
    :type :safety))

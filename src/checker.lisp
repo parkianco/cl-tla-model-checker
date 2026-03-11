@@ -268,7 +268,7 @@
       (:until (format nil "(~A) U (~A)"
                       (emit-formula (first children) 0)
                       (emit-formula (second children) 0)))
-      (:leads-to (format nil "(~A) ~> (~A)"
+      (:leads-to (format nil "(~A) ~~> (~A)"
                          (emit-formula (first children) 0)
                          (emit-formula (second children) 0)))
       (:next (format nil "O(~A)" (emit-formula value 0)))
@@ -318,7 +318,7 @@
                     (mapcar (lambda (a) (emit-formula a indent)) args)))
       (:or (format nil "(~{~A~^ \\/ ~})"
                    (mapcar (lambda (a) (emit-formula a indent)) args)))
-      (:not (format nil "~(~A)" (emit-formula (first args) indent)))
+      (:not (format nil "~~(~A)" (emit-formula (first args) indent)))
       (:implies (format nil "(~A) => (~A)"
                         (emit-formula (first args) indent)
                         (emit-formula (second args) indent)))
