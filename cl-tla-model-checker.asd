@@ -5,7 +5,7 @@
   :name "cl-tla-model-checker"
   :version "1.0.0"
   :description "Pure Common Lisp TLA+ temporal logic model checker"
-  :author "CLPIC Project"
+  :author "Parkian Company LLC"
   :license "MIT"
   :depends-on ()
   :serial t
