@@ -125,6 +125,7 @@ and refinement checking for distributed systems specifications.")
    #:fairness-constraint-vars
    #:weak-fair
    #:strong-fair
+   #:fairness-formula
    #:compose-fairness)
 
   ;; Refinement
@@ -181,6 +182,7 @@ and refinement checking for distributed systems specifications.")
    #:defspec
    #:with-spec-context
    #:emit-module
+   #:emit-formula
    #:emit-to-file)
 
   ;; Configuration
