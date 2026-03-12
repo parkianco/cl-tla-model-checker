@@ -31,4 +31,6 @@
     :components
     ((:file "test-tla"))))
   :perform (test-op (o c)
-             (uiop:symbol-call :cl-tla-model-checker.test :run-tests)))
+             (let ((result (uiop:symbol-call :cl-tla-model-checker.test :run-tests)))
+               (unless result
+                 (error "Tests failed")))))
