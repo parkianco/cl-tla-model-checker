@@ -263,7 +263,7 @@
               :variables (list (tla:make-tla-var :name 'pc)
                                (tla:make-tla-var :name 'waiting))
               :theorems (list (tla:make-tla-theorem
-                               :name 'MutualExclusion
+                               :name "MutualExclusion"
                                :formula (tla:temporal-always
                                          '(:forall p1 Procs
                                            (:forall p2 Procs
