@@ -1,3 +1,6 @@
+;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
+;; SPDX-License-Identifier: BSD-3-Clause
+
 ;;;; test-tla.lisp
 ;;;; Tests for TLA+ Model Checker
 
@@ -181,14 +184,14 @@
 ;;; ============================================================================
 
 (deftest test-emit-formula-logic
-  (assert-equal "(TRUE /\\ TRUE)" (tla:emit-formula '(:and :true :true) 0))
-  (assert-equal "(TRUE \\/ FALSE)" (tla:emit-formula '(:or :true :false) 0))
+  (assert-equal "(TRUE /\ TRUE)" (tla:emit-formula '(:and :true :true) 0))
+  (assert-equal "(TRUE \/ FALSE)" (tla:emit-formula '(:or :true :false) 0))
   (assert-equal "(P) => (Q)" (tla:emit-formula '(:implies P Q) 0)))
 
 (deftest test-emit-formula-quantifiers
   (let ((formula (tla:emit-formula '(:forall n Nodes (:in n alive)) 0)))
-    (assert-true (search "\\A" formula))
-    (assert-true (search "\\in" formula))))
+    (assert-true (search "\A" formula))
+    (assert-true (search "\in" formula))))
 
 (deftest test-emit-formula-temporal
   (let ((always (tla:emit-formula '(:box safe) 0))
@@ -197,9 +200,9 @@
     (assert-true (search "<>" eventually))))
 
 (deftest test-emit-formula-sets
-  (assert-true (search "\\in" (tla:emit-formula '(:in x S) 0)))
-  (assert-true (search "\\cup" (tla:emit-formula '(:union A B) 0)))
-  (assert-true (search "\\cap" (tla:emit-formula '(:inter A B) 0))))
+  (assert-true (search "\in" (tla:emit-formula '(:in x S) 0)))
+  (assert-true (search "\cup" (tla:emit-formula '(:union A B) 0)))
+  (assert-true (search "\cap" (tla:emit-formula '(:inter A B) 0))))
 
 (deftest test-emit-module
   (let* ((mod (tla:make-tla-module
