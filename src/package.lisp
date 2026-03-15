@@ -15,7 +15,9 @@ and refinement checking for distributed systems specifications.")
 
   ;; AST Types
   (:export
-   #:tla-ast-node
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:tla-ast-node
    #:make-tla-ast-node
    #:tla-ast-node-p
    #:tla-ast-kind
@@ -30,7 +32,9 @@ and refinement checking for distributed systems specifications.")
 
   ;; Module Types
   (:export
-   #:tla-module
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:tla-module
    #:make-tla-module
    #:tla-module-p
    #:tla-module-name
@@ -66,7 +70,9 @@ and refinement checking for distributed systems specifications.")
 
   ;; State Machine Types
   (:export
-   #:state-machine
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:state-machine
    #:make-state-machine
    #:state-machine-p
    #:state-machine-name
@@ -96,7 +102,9 @@ and refinement checking for distributed systems specifications.")
 
   ;; Temporal Operators
   (:export
-   #:temporal-always
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:temporal-always
    #:temporal-eventually
    #:temporal-until
    #:temporal-leads-to
@@ -117,7 +125,9 @@ and refinement checking for distributed systems specifications.")
 
   ;; Fairness
   (:export
-   #:fairness-constraint
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:fairness-constraint
    #:make-fairness-constraint
    #:fairness-constraint-p
    #:fairness-constraint-kind
@@ -130,7 +140,9 @@ and refinement checking for distributed systems specifications.")
 
   ;; Refinement
   (:export
-   #:refinement-mapping
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:refinement-mapping
    #:make-refinement-mapping
    #:refinement-mapping-p
    #:refinement-mapping-source
@@ -144,7 +156,9 @@ and refinement checking for distributed systems specifications.")
 
   ;; Model Checking
   (:export
-   #:model-config
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:model-config
    #:make-model-config
    #:model-config-p
    #:model-config-spec
@@ -165,7 +179,9 @@ and refinement checking for distributed systems specifications.")
 
   ;; State Space Exploration
   (:export
-   #:state-space
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:state-space
    #:make-state-space
    #:state-space-p
    #:explore-states
@@ -177,7 +193,9 @@ and refinement checking for distributed systems specifications.")
 
   ;; Spec Generation
   (:export
-   #:generate-tla-spec
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:generate-tla-spec
    #:lisp-to-tla
    #:defspec
    #:with-spec-context
@@ -187,7 +205,9 @@ and refinement checking for distributed systems specifications.")
 
   ;; Configuration
   (:export
-   #:*tla-output-dir*
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:*tla-output-dir*
    #:*tla-indent*
    #:*tla-line-width*
    #:*tlc-path*
@@ -195,4 +215,7 @@ and refinement checking for distributed systems specifications.")
 
 (defpackage #:cl-tla-model-checker.test
   (:use #:cl #:cl-tla-model-checker)
-  (:export #:run-tests))
+  (:export
+   #:with-tla-model-checker-timing
+   #:tla-model-checker-batch-process
+   #:tla-model-checker-health-check#:run-tests))

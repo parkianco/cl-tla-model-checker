@@ -8,24 +8,21 @@
   :name "cl-tla-model-checker"
   :version "0.1.0"
   :description "Pure Common Lisp TLA+ temporal logic model checker"
-  :author "Parkian Company LLC"
-  :license "MIT"
+  :author "Park Ian Co"
+  :license "Apache-2.0"
   :depends-on ()
   :serial t
   :components
   ((:file "package")
    (:module "src"
-    :serial t
-    :components
-    ((:file "util")
-     (:file "spec")
-     (:file "state")
-     (:file "temporal")
-     (:file "checker"))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-tla-model-checker" :depends-on ("package" "conditions" "types"))))))
   :in-order-to ((asdf:test-op (test-op #:cl-tla-model-checker/test))))
 
 (asdf:defsystem #:cl-tla-model-checker/test
-  :name "cl-tla-model-checker-test"
+  :name "cl-tla-model-checker"
   :version "0.1.0"
   :description "Tests for cl-tla-model-checker"
   :depends-on (#:cl-tla-model-checker)
