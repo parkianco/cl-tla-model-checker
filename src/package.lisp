@@ -15,7 +15,11 @@ and refinement checking for distributed systems specifications.")
 
   ;; AST Types
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:tla-ast-node
    #:make-tla-ast-node
@@ -32,7 +36,11 @@ and refinement checking for distributed systems specifications.")
 
   ;; Module Types
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:tla-module
    #:make-tla-module
@@ -70,7 +78,11 @@ and refinement checking for distributed systems specifications.")
 
   ;; State Machine Types
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:state-machine
    #:make-state-machine
@@ -102,7 +114,11 @@ and refinement checking for distributed systems specifications.")
 
   ;; Temporal Operators
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:temporal-always
    #:temporal-eventually
@@ -125,7 +141,11 @@ and refinement checking for distributed systems specifications.")
 
   ;; Fairness
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:fairness-constraint
    #:make-fairness-constraint
@@ -140,7 +160,11 @@ and refinement checking for distributed systems specifications.")
 
   ;; Refinement
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:refinement-mapping
    #:make-refinement-mapping
@@ -156,7 +180,11 @@ and refinement checking for distributed systems specifications.")
 
   ;; Model Checking
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:model-config
    #:make-model-config
@@ -179,7 +207,11 @@ and refinement checking for distributed systems specifications.")
 
   ;; State Space Exploration
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:state-space
    #:make-state-space
@@ -193,7 +225,11 @@ and refinement checking for distributed systems specifications.")
 
   ;; Spec Generation
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:generate-tla-spec
    #:lisp-to-tla
@@ -205,7 +241,11 @@ and refinement checking for distributed systems specifications.")
 
   ;; Configuration
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:*tla-output-dir*
    #:*tla-indent*
@@ -216,6 +256,10 @@ and refinement checking for distributed systems specifications.")
 (defpackage #:cl-tla-model-checker.test
   (:use #:cl #:cl-tla-model-checker)
   (:export
-   #:with-tla-model-checker-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-tla-model-checker-timing
    #:tla-model-checker-batch-process
    #:tla-model-checker-health-check#:run-tests))
